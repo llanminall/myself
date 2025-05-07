@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.32 72.08">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Gabriola, Gabriola;
+        font-size: 10.63px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #231f20;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-2" d="M15.34,25.34c5.69,5.47,9.11,11.95,14.84,17.38,3.35,3.17,7.4,6.01,12.18,8,3.31,1.38,6.74,2.14,10.32,2.57l5.09-16.27c.19-.62,1.87-.54,1.87,.08l.02,16.68c5.62,.22,11.3,.6,16.2,2.82,.86,.39,1.7,.81,2.52,1.24V19.66c7.09-2.24,3.09-4.4-1.83-4.4h-21.89c-4.38,0-8.11,1.72-8.81,4.05l-4.7,15.73c-.17,.56-1.67,.57-1.86,.01l-3.21-9.45c-.7-2.32-1.39-4.46-2.07-6.42-.79-2.27-4.46-3.91-8.74-3.91H3.3c-1.78,0-2.76,.28-3.3,.77,6.17,1.74,11.31,5.43,15.34,9.31Z"/>
+    <path class="cls-2" d="M82.32,6.33h0c0,3.5-1.76,6.33-3.94,6.33h-11.72c-2.18,0-3.94-2.84-3.94-6.33h0C62.72,2.84,64.48,0,66.66,0h11.72c2.18,0,3.94,2.84,3.94,6.33Z"/>
+  </g>
+  <text class="cls-1" transform="translate(25.7 51.83) rotate(27.52) scale(2.11 1)"><tspan x="0" y="0">m</tspan></text>
+  <text class="cls-1" transform="translate(38.49 58.04) rotate(16.51) scale(2.11 1)"><tspan x="0" y="0">y</tspan></text>
+  <text class="cls-1" transform="translate(45.74 60.09) rotate(13.11) scale(2.11 1)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-1" transform="translate(49.53 60.98) rotate(12.09) scale(2.11 1)"><tspan x="0" y="0">s</tspan></text>
+  <text class="cls-1" transform="translate(55.84 62.34) rotate(10.56) scale(2.11 1)"><tspan x="0" y="0">e</tspan></text>
+  <text class="cls-1" transform="translate(62.6 63.59) rotate(8.98) scale(2.11 1)"><tspan x="0" y="0">l</tspan></text>
+  <text class="cls-1" transform="translate(66.95 64.28) rotate(7.25) scale(2.11 1)"><tspan x="0" y="0">f</tspan></text>
+</svg>

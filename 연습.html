@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      body {
+        background-color: #000;
+      }
+      .text-box {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 200px;
+      }
+
+      .text-box > span {
+        display: block;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0.5px #fff;
+        text-align: center;
+        font-size: 5vw;
+        font-weight: 800;
+        line-height: 1.3;
+      }
+
+      #text-bg {
+        -webkit-text-fill-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text_box" data-trigger>
+      <span class="text"></span>
+    </div>
+    <script>
+      const text1 = "우리는 더 크게 환호할 미래를 위해서";
+      const text2 = "더 큰 꿈을 꿉니다";
+      const text = document.querySelector(".text");
+      let i = 0;
+
+      function typing() {
+        if (i < text1.length) {
+          let txt = text1.charAt(i);
+          text.innerHTML += txt;
+        } else if (i === text1.length) {
+          text.innerHTML += "<br>";
+          text.innerHTML += "<span id='text-bg'></span>";
+        } else if (i - text1.length <= text2.length) {
+          let txt = text2.charAt(i - text1.length);
+          document.getElementById("text-bg").innerHTML += txt;
+        }
+        i += 1;
+
+        if (i > text1.length + text2.length) {
+          clearInterval(intervalId);
+        }
+      }
+
+      const intervalId = setInterval(typing, 100);
+    </script>
+  </body>
+</html>
