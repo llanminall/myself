@@ -37,6 +37,9 @@ $(function () {
       $(".navi li").removeClass("on");
       $(".navi li").eq(4).addClass("on");
     }
+    if (sc >= con01 && sc < con05) {
+      $("#con01 .header").addClass("on");
+    }
 
     $(".header li").on("click", function () {
       let s = $(this).index();

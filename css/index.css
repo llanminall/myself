@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "SBAggroB";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
     format("woff");
@@ -25,14 +18,16 @@ li {
   list-style: none;
 }
 body {
-  font-family: "Pretendard-Regular";
+  font-family: "SBAggroB";
+
+  /* font-family: "Pretendard-Regular"; */
   /* overflow-x: hidden; */
   /* height: 3000px; */
 }
 
 /* con01 */
 #con01 {
-  background-image: linear-gradient(to top right, #ebe784, #439973);
+  background-image: linear-gradient(to top right, #ebe784, #439973, #77b577);
 
   width: 100%;
   height: 100vh;
@@ -42,23 +37,30 @@ body {
 /* con01 header */
 #con01 .header {
   width: 100%;
-  margin: 1.5rem auto;
-  padding: 0rem 2rem;
-  height: 80px;
-
+  padding: 0rem 4rem;
+  height: 110px;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   position: fixed;
   z-index: 100;
+  border-bottom: 1px solid lightgoldenrodyellow;
 }
 #con01 .header h1 {
-  text-align: center;
+  width: 100px;
+  height: 100px;
+  margin-top: 0.5rem;
 }
 #con01 .header h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
 }
 #con01 .header h1 a > img {
-  width: 100px;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 /* header menu */
 #con01 .header .menu {
@@ -73,22 +75,25 @@ body {
   font-size: 1.5rem;
 }
 #con01 .header .menu > li a {
-  /* padding: 1rem 5rem; */
   display: block;
+  color: #fff;
+}
+#con01 .header .menu > li a:hover {
+  color: #ebe784;
+  border-bottom: 1px solid #ebe784;
 }
 
-/* #con01 .header .menu > li a.on {
-  background-color: #fff;
-} */
+#con01 .header.on {
+  background-color: #439973;
+}
 /* intro */
 #con01 .intro {
-  width: 100%;
+  width: 50%;
   height: 740px;
-  padding: 4.6rem 0rem 0rem 8rem;
-
-  font-size: 2rem;
+  padding: 9rem 0rem 0rem 9rem;
+  font-size: 2.2rem;
   box-sizing: border-box;
-  line-height: 3rem;
+  line-height: 3.5rem;
 }
 #con01 .intro .char {
   position: relative;
@@ -102,7 +107,7 @@ body {
   left: 0px;
   top: 0px;
   content: attr(data-char);
-  color: #ebe784;
+  color: #005b42;
 
   transition: 0.3s;
   transition-delay: calc(60ms * var(--char-index));
@@ -124,7 +129,8 @@ body {
 }
 #con01 .intro .txt03 .char::before {
   transform: translateY(100%);
-  color: #439973;
+
+  color: #ebe784;
 }
 
 #con01 .intro p:hover .char::before {
@@ -141,46 +147,6 @@ body {
 #con01 .intro .txt08:hover .char::after {
   transform: translateY(-100%);
 }
-
-#con01 .flower {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  right: 20%;
-  top: 80%;
-  opacity: 0;
-}
-
-#con01 .flower02 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  right: 15%;
-  top: 80%;
-  opacity: 0;
-}
-
-#con01 .flower03 {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 10%;
-  top: 80%;
-  opacity: 0;
-}
-#con01 .flower img {
-  width: 100%;
-  height: 100%;
-}
-#con01 .flower02 img {
-  width: 100%;
-  height: 100%;
-}
-#con01 .flower03 img {
-  width: 100%;
-  height: 100%;
-}
-
 /* intro txt */
 #con01 .intro .txt {
   padding-top: 3rem;
@@ -210,29 +176,89 @@ body {
 #con01 .intro .txt07 {
   padding-left: 7rem;
 }
+/* shape */
+#con01 .shape {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 50px;
+  top: 60%;
+  animation: move02 2s infinite linear;
+}
+
+@keyframes move02 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#con01 .shape img {
+  width: 100%;
+  height: 100%;
+}
+/* shape01 */
+#con01 .shape01 {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  left: 650px;
+  top: 30%;
+  animation: move03 2s infinite linear;
+}
+
+@keyframes move03 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#con01 .shape01 img {
+  width: 100%;
+  height: 100%;
+}
 
 /* arrow */
 
 #con01 .arrow img {
-  width: 180px;
+  width: 150px;
+  height: 250px;
   position: absolute;
-  left: 40%;
-  top: 300px;
+  right: 550px;
+  top: 70px;
   opacity: 0;
   transition: 1s;
+  animation: move04 1s infinite linear;
 }
-#con01 .arrow img.on {
+
+@keyframes move04 {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* #con01 .arrow img.on {
   opacity: 1;
   top: 160px;
-}
+} */
 
 /* mainImg */
 #con01 .mainImg img {
-  width: 400px;
-  height: 580px;
+  width: 350px;
+  height: 480px;
   position: absolute;
-  left: 44%;
-  bottom: 40px;
+  right: 300px;
+  bottom: 190px;
   transition: 1s;
   cursor: pointer;
 }
