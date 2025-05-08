@@ -40,7 +40,7 @@ body {
   padding: 0rem 4rem;
   height: 110px;
   display: flex;
-  justify-content: space-between;
+
   box-sizing: border-box;
   position: fixed;
   z-index: 100;
@@ -64,23 +64,58 @@ body {
 }
 /* header menu */
 #con01 .header .menu {
+  width: 100%;
+  justify-content: end;
   height: 100%;
-  align-items: center;
   display: flex;
+
+  align-items: center;
 }
+
 /* header menu li*/
 #con01 .header .menu > li {
-  text-align: center;
   padding: 0rem 1.5rem;
-  font-size: 1.5rem;
 }
 #con01 .header .menu > li a {
-  display: block;
   color: #fff;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 1.5rem;
 }
-#con01 .header .menu > li a:hover {
+
+#con01 .menu li a::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
   color: #ebe784;
-  border-bottom: 1px solid #ebe784;
+  transition: 0.3s;
+}
+
+#con01 .menu li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ebe784;
+  transition: 0.3s;
+}
+
+#con01 .menu li a:hover::before {
+  top: 0;
+}
+#con01 .menu li a:hover {
+  color: transparent;
+}
+
+#con01 .menu li a:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 #con01 .header.on {
@@ -102,7 +137,7 @@ body {
   overflow: hidden;
 }
 #con01 .intro .txt03 .char::before,
-#con01 .intro .txt03 .char:after {
+#con01 .intro .txt03 .char::after {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -183,7 +218,8 @@ body {
   position: absolute;
   left: 50px;
   top: 60%;
-  animation: move02 2s infinite linear;
+  animation: move02 3s infinite linear;
+  opacity: 0.5;
 }
 
 @keyframes move02 {
@@ -206,7 +242,8 @@ body {
   position: absolute;
   left: 650px;
   top: 30%;
-  animation: move03 2s infinite linear;
+  animation: move03 3s infinite linear;
+  opacity: 0.5;
 }
 
 @keyframes move03 {
