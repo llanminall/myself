@@ -5,37 +5,43 @@ $(function () {
   let con03 = $("#con03").offset().top;
   let con04 = $("#con04").offset().top;
   let con05 = $("#con05").offset().top;
+  let t1 = gsap.timeline();
+  t1.fromTo(".txt01", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1 })
+    .fromTo(".txt02", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1 })
+    .fromTo(".txt03", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1 })
+    .to(".logo", { x: -760, y: -390, transform: "scale(0.65)", duration: 2 })
+    .fromTo(
+      "section",
+      { "clip-path": "inset(0% 0% 0% 0% round 0%)" },
+      {
+        "clip-path": "inset(60% 60% 60% 60% round 30%)",
+        ease: "none",
+        duration: 2,
+      }
+    );
 
+  //con01모션
   $(".txt03").addClass("on");
   $(".look").find("img").addClass("on");
+  $(".mainImg").find("img").addClass("on");
 
   $(window).on("scroll", function () {
     let sc = $(this).scrollTop();
     console.log(sc);
 
     if (sc >= con01 && sc < con02) {
-      $(".navi li").removeClass("on");
-      $(".navi li").eq(0).addClass("on");
     }
     if (sc >= con02 && sc < con03) {
       $("#con02 .education_wrap").addClass("on");
       $("#con02 .skill_wrap").addClass("on");
       $("#con02 .character_wrap").addClass("on");
       $("#con02 .introduce_txt").addClass("on");
-      $(".navi li").removeClass("on");
-      $(".navi li").eq(1).addClass("on");
     }
     if (sc >= con03 && sc < con04) {
-      $(".navi li").removeClass("on");
-      $(".navi li").eq(2).addClass("on");
     }
     if (sc >= con04 && sc < con05) {
-      $(".navi li").removeClass("on");
-      $(".navi li").eq(3).addClass("on");
     }
     if (sc >= con05) {
-      $(".navi li").removeClass("on");
-      $(".navi li").eq(4).addClass("on");
     }
     if (sc >= con01 && sc < con05) {
       $("#con01 .header").addClass("on");
@@ -48,29 +54,6 @@ $(function () {
       console.log(target);
       $("html").stop().animate({ scrollTop: target });
     });
-  });
-  $(".navi li").on("click", function () {
-    let k = $(this).index();
-    //  console.log(i);
-    let target = $("#wrap > div").eq(k).offset().top;
-    console.log(target);
-    $("html").stop().animate({ scrollTop: target });
-  });
-
-  //con01모션
-  setInterval(function () {
-    $(".marquee ").animate({ "margin-left": "-300px" }, 1000, function () {
-      $(".marquee li:first-child").appendTo(".marquee");
-      $(".marquee").css("margin-left", "0");
-    });
-  }, 2000);
-  $(".mainImg").on("mouseenter", function () {
-    $(".arrow").find("img").addClass("on");
-    $(".mainImg").find("img").addClass("on");
-  });
-  $(".mainImg").on("mouseleave", function () {
-    $(".arrow").find("img").removeClass("on");
-    $(".mainImg").find("img").removeClass("on");
   });
 
   //con02모션

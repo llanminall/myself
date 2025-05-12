@@ -20,15 +20,87 @@ li {
 body {
   font-family: "SBAggroB";
 
-  /* font-family: "Pretendard-Regular"; */
   /* overflow-x: hidden; */
-  /* height: 3000px; */
+}
+/* section */
+section {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to top right, #ebe784, #439973, #77b577);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+section ul {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+section p {
+  font-size: 2rem;
+  line-height: 3.3rem;
+  color: #fff;
+}
+/*section img*/
+section ul li img {
+  width: 150px;
+  height: 150px;
+}
+section .text_main {
+  margin-left: 15%;
+  display: inline-block;
+  height: 100vh;
+  position: relative;
+  margin-top: 30%;
+  overflow-y: hidden;
+}
+section .text_main h3 {
+  font-size: 2.8vw;
+  color: #fff;
+  border-right: 4px solid #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 10s steps(27) forwards, blink-caret 1s step-end infinite;
+  animation-iteration-count: infinite;
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  30% {
+    width: 100%;
+  }
+  80% {
+    width: 100%;
+  }
+  90% {
+    width: 0%;
+  }
+  100% {
+    width: 0%;
+  }
 }
 
 /* con01 */
 #con01 {
   background-image: linear-gradient(to top right, #ebe784, #439973, #77b577);
-
   width: 100%;
   height: 100vh;
   position: relative;
@@ -40,10 +112,9 @@ body {
   padding: 0rem 4rem;
   height: 110px;
   display: flex;
-
-  box-sizing: border-box;
   position: fixed;
-  z-index: 100;
+  box-sizing: border-box;
+  z-index: 50;
   border-bottom: 1px solid lightgoldenrodyellow;
 }
 #con01 .header h1 {
@@ -125,7 +196,7 @@ body {
 #con01 .intro {
   width: 50%;
   height: 740px;
-  padding: 9rem 0rem 0rem 9rem;
+  padding: 6rem 0rem 0rem 9rem;
   font-size: 2.2rem;
   box-sizing: border-box;
   line-height: 3.5rem;
@@ -160,7 +231,6 @@ body {
 }
 #con01 .intro .char::before {
   transform: translateY(100%);
-  /* color: red; */
 }
 #con01 .intro .txt03 .char::before {
   transform: translateY(100%);
@@ -206,10 +276,10 @@ body {
 }
 
 #con01 .intro .txt05 {
-  padding-left: 18rem;
+  padding-left: 13rem;
 }
 #con01 .intro .txt07 {
-  padding-left: 7rem;
+  padding-left: 5rem;
 }
 /* shape */
 #con01 .shape {
@@ -260,48 +330,18 @@ body {
   height: 100%;
 }
 
-/* arrow */
-
-#con01 .arrow img {
-  width: 150px;
-  height: 250px;
-  position: absolute;
-  right: 550px;
-  top: 70px;
-  opacity: 0;
-  transition: 1s;
-  animation: move04 1s infinite linear;
-}
-
-@keyframes move04 {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-/* #con01 .arrow img.on {
-  opacity: 1;
-  top: 160px;
-} */
-
 /* mainImg */
 #con01 .mainImg img {
-  width: 350px;
-  height: 480px;
+  width: 400px;
+  height: 550px;
   position: absolute;
-  right: 300px;
-  bottom: 190px;
+  right: -300px;
   transition: 1s;
-  cursor: pointer;
+  bottom: 190px;
 }
 
 #con01 .mainImg img.on {
-  transform: rotate(360deg);
+  right: 300px;
 }
 /* look */
 #con01 .look {
