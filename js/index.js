@@ -31,15 +31,19 @@ $(function () {
 
     if (sc >= con01 && sc < con02) {
     }
-    if (sc >= con02 && sc < con03) {
-      $("#con02 .education_wrap").addClass("on");
-      $("#con02 .skill_wrap").addClass("on");
-      $("#con02 .character_wrap").addClass("on");
+    if (sc >= 400 && sc < con03) {
+      // $("#con02 .education_wrap").addClass("on");
+      $("#con02 .skill_img01").addClass("on");
+      // $("#con02 .character_wrap").addClass("on");
       $("#con02 .introduce_txt").addClass("on");
     }
-    if (sc >= con03 && sc < con04) {
-    }
-    if (sc >= con04 && sc < con05) {
+
+    if (sc >= 900 && sc < con03) {
+      $("#con02 .education_txt01").addClass("on");
+      $("#con02 .education_txt02").addClass("on");
+      $("#con02 .education_txt03").addClass("on");
+      $("#con02 .education_txt04").addClass("on");
+      $("#con02 .character_img02").addClass("on");
     }
     if (sc >= con05) {
     }

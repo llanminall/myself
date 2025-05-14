@@ -5,6 +5,20 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HakgyoansimDunggeunmisoTTF-B";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -235,7 +249,7 @@ section .text_main h3 {
 #con01 .intro .txt03 .char::before {
   transform: translateY(100%);
 
-  color: #ebe784;
+  color: #eeeb9e;
 }
 
 #con01 .intro p:hover .char::before {
@@ -362,7 +376,7 @@ section .text_main h3 {
 #con02 {
   width: 100%;
   height: 100vh;
-  background-color: #ebe784;
+  background-color: #eeeb9e;
   padding: 2rem 0rem;
   box-sizing: border-box;
   overflow: hidden;
@@ -371,22 +385,24 @@ section .text_main h3 {
 /* about_wrap */
 #con02 .about_wrap {
   width: 90%;
-  margin: 2rem auto;
+  margin: 0rem auto;
+  padding-top: 7rem;
+  box-sizing: border-box;
 }
 /* con02 h2 */
 #con02 h2 {
   background-color: #439973;
-  width: 200px;
+  width: 230px;
   height: 50px;
   line-height: 50px;
-  border-radius: 50px 0px 50px 10px;
+  border-radius: 10px 50px 10px 50px;
   text-align: center;
   color: #fff;
 }
 #con02 p {
   font-size: 1.2rem;
-  color: #999;
-  font-weight: 600;
+  color: #222;
+  font-family: "HakgyoansimDunggeunmisoTTF-B";
 }
 
 /*about_top */
@@ -394,6 +410,7 @@ section .text_main h3 {
   width: 100%;
   height: 360px;
   display: flex;
+  gap: 350px;
 }
 /* introduce */
 #con02 .introduce {
@@ -402,17 +419,28 @@ section .text_main h3 {
 /* introduce_txt */
 #con02 .introduce_txt {
   margin: 1.5rem 0rem;
-  font-size: 1.2rem;
-  letter-spacing: 6px;
+  font-size: 1.5rem;
+  letter-spacing: 7px;
   line-height: 3rem;
   margin-left: 2rem;
+  font-weight: 600;
+  font-family: "Pretendard-Regular";
   position: relative;
-  left: -100%;
+  top: 100px;
   opacity: 0;
   transition: 1s;
 }
+#con02 .introduce_txt li span {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 6px;
+  -webkit-text-stroke: 1px #005b42;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
 #con02 .introduce_txt.on {
-  left: 0%;
+  top: 0;
   opacity: 1;
 }
 
@@ -424,66 +452,41 @@ section .text_main h3 {
 /* skill_wrap */
 #con02 .skill_wrap {
   width: 100%;
-  position: relative;
-  right: -100%;
-  opacity: 0;
-  transition: 1s;
 }
-#con02 .skill_wrap.on {
-  right: 0;
-  opacity: 1;
-}
+
 /* skiil_img01 */
 #con02 .skill_img01 {
   width: 100%;
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem 2rem;
   margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  transition: 1s;
 }
 #con02 .skill_img01 > li {
-  width: 100px;
+  width: calc(90% / 4 - 2rem);
   height: 100px;
-  border: 2px solid #005b42;
-  border-radius: 50%;
-  padding: 0.5rem;
 }
 #con02 .skill_img01 > li img {
-  width: 100px;
-  height: 100px;
-
-  transition: 1s;
-}
-#con02 .skill_img01 > li img.on {
-  transform: rotate(360deg);
-}
-
-/*skiil_img02  */
-#con02 .skill_img02 {
   width: 100%;
 
-  display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-#con02 .skill_img02 > li {
-  width: 100px;
-  height: 100px;
-  border: 2px solid #005b42;
-  border-radius: 50%;
-  padding: 0.5rem;
-}
-#con02 .skill_img02 > li img {
-  width: 100px;
-  height: 100px;
   transition: 1s;
 }
-#con02 .skill_img02 > li img.on {
-  transform: rotate(360deg);
+#con02 .skill_img01.on {
+  top: 0px;
+  opacity: 1;
 }
+
 /* about_bottom */
 #con02 .about_bottom {
   width: 100%;
   display: flex;
+  gap: 190px;
+  justify-content: space-between;
 }
 /*  education */
 #con02 .education {
@@ -493,17 +496,14 @@ section .text_main h3 {
   width: 100%;
 
   position: relative;
-  left: -100%;
-  transition: 1s;
 }
-#con02 .education_wrap.on {
-  left: 0%;
-}
+
 /* education_career */
 #con02 .education_career {
-  margin-top: 1rem;
-  width: 650px;
-  height: 280px;
+  margin-top: 2rem;
+
+  width: 900px;
+  height: 290px;
 }
 #con02 .education_career img {
   width: 100%;
@@ -513,22 +513,51 @@ section .text_main h3 {
 /* education_txt01 */
 #con02 .education_txt01 {
   position: absolute;
-  left: 130px;
-  bottom: 30px;
+  left: 180px;
+  bottom: -30px;
+  transition: 1s;
+  opacity: 0;
 }
-
+#con02 .education_txt01.on {
+  bottom: 0px;
+  opacity: 1;
+}
 /* education_txt02 */
 #con02 .education_txt02 {
   position: absolute;
-  left: 350px;
+  left: 150px;
+  top: 30px;
+  transition: 1s;
+  opacity: 0;
+}
+#con02 .education_txt02.on {
   top: 0px;
+  opacity: 1;
 }
 
 /* education_txt03 */
 #con02 .education_txt03 {
   position: absolute;
-  left: 490px;
+  left: 540px;
+  bottom: -30px;
+  transition: 1s;
+  opacity: 0;
+}
+#con02 .education_txt03.on {
   bottom: 0px;
+  opacity: 1;
+}
+/* education_txt04 */
+#con02 .education_txt04 {
+  position: absolute;
+  left: 550px;
+  top: 20px;
+  transition: 1s;
+  opacity: 0;
+}
+#con02 .education_txt04.on {
+  top: 0px;
+  opacity: 1;
 }
 
 /*character  */
@@ -538,54 +567,59 @@ section .text_main h3 {
 #con02 .character_wrap {
   width: 100%;
   position: relative;
-  right: -100%;
-  transition: 1s;
-}
-#con02 .character_wrap.on {
-  right: 0%;
 }
 /* character_txt01 */
 #con02 .character_txt01 {
   position: absolute;
-  left: 130px;
-  top: 80px;
+  left: 0px;
+  bottom: -60px;
+
+  text-align: center;
 }
 /* character_txt02 */
 #con02 .character_txt02 {
   position: absolute;
-  left: 190px;
-  top: 220px;
+  left: 430px;
+  bottom: -60px;
 }
 /* character_txt03 */
 #con02 .character_txt03 {
   position: absolute;
-  left: 430px;
-  top: -30px;
+  left: 560px;
+  bottom: -40px;
 }
 /* character_txt04 */
 #con02 .character_txt04 {
   position: absolute;
-  left: 560px;
-  top: 80px;
+  left: 280px;
+  bottom: -40px;
 }
 /* character_txt05 */
 #con02 .character_txt05 {
   position: absolute;
-  left: 520px;
-  top: 220px;
+  left: 130px;
+  bottom: -40px;
 }
 
 /* character_img02 */
 #con02 .character_img02 {
-  width: 250px;
-  margin: 50px auto;
+  width: 650px;
+  margin-top: 50px;
+  position: relative;
+  top: 700;
+  opacity: 0;
+  transition: 1s;
+}
+#con02 .character_img02.on {
+  top: 0;
+  opacity: 1;
 }
 
 /* con03 */
 #con03 {
   width: 100%;
   height: 100vh;
-  background-color: #aecf7b;
+  background-color: #439973;
   padding: 2rem 0rem;
   box-sizing: border-box;
   position: relative;
@@ -723,7 +757,7 @@ section .text_main h3 {
 #con04 {
   width: 100%;
   height: 100vh;
-  background-color: #ebe784;
+  background-color: #eeeb9e;
   padding: 2rem 0rem 0rem;
   box-sizing: border-box;
   position: relative;
@@ -733,15 +767,15 @@ section .text_main h3 {
 #con04 .illust_txt01 h2 {
   font-family: "SBAggroB";
   font-size: 5rem;
-  -webkit-text-stroke: 2px #fefedf;
+  -webkit-text-stroke: 2px #fff;
   color: transparent;
-  background: linear-gradient(to left, transparent, #fefedf);
+  background: linear-gradient(to left, transparent, #fff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   position: absolute;
   left: 5%;
-  top: 25%;
+  top: 20%;
 }
 /* illust_wrap */
 #con04 .illust_wrap {
@@ -752,7 +786,7 @@ section .text_main h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 200px;
   box-sizing: border-box;
 }
 /* illust_modal01 */
@@ -786,8 +820,8 @@ section .text_main h3 {
   display: none;
 }
 #con04 .illust_modal02 {
-  width: 35%;
-  height: 900px;
+  width: 30%;
+  height: 750px;
 
   position: absolute;
   left: 50%;
@@ -799,7 +833,7 @@ section .text_main h3 {
   height: 0%;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 60%;
   transform: translate(-50%, -50%);
 }
 #con04 .illust_modal02 > li img {
@@ -812,8 +846,8 @@ section .text_main h3 {
   font-size: 2.5rem;
   color: #fff;
   position: absolute;
-  right: 630px;
-  top: 20px;
+  right: 690px;
+  top: 170px;
   z-index: 50;
 }
 
@@ -821,7 +855,7 @@ section .text_main h3 {
 #con05 {
   width: 100%;
   height: 100vh;
-  background-color: #aecf7b;
+  background-color: #439973;
   padding: 2rem 0rem;
   box-sizing: border-box;
   position: relative;
