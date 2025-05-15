@@ -46,6 +46,7 @@ section {
   top: 0;
   z-index: 100;
 }
+/*section ul  */
 section ul {
   width: 100%;
   display: flex;
@@ -57,7 +58,7 @@ section ul {
   top: 50%;
   transform: translateY(-50%);
 }
-
+/* section p  */
 section p {
   font-size: 2rem;
   line-height: 3.3rem;
@@ -68,6 +69,7 @@ section ul li img {
   width: 150px;
   height: 150px;
 }
+/* text_main  */
 section .text_main {
   margin-left: 15%;
   display: inline-block;
@@ -270,9 +272,11 @@ section .text_main h3 {
 #con01 .intro .txt {
   padding-top: 3rem;
 }
+/* txt01 */
 #con01 .intro .txt01 {
   padding-left: 5rem;
 }
+/* txt03 */
 #con01 .intro .txt03 {
   padding-left: 9rem;
   display: inline;
@@ -288,10 +292,11 @@ section .text_main h3 {
   top: 0;
   opacity: 1;
 }
-
+/* txt05 */
 #con01 .intro .txt05 {
   padding-left: 13rem;
 }
+/* txt07 */
 #con01 .intro .txt07 {
   padding-left: 5rem;
 }
@@ -392,13 +397,14 @@ section .text_main h3 {
 /* con02 h2 */
 #con02 h2 {
   background-color: #439973;
-  width: 230px;
+  width: 250px;
   height: 50px;
   line-height: 50px;
   border-radius: 10px 50px 10px 50px;
   text-align: center;
   color: #fff;
 }
+/* con02 p */
 #con02 p {
   font-size: 1.2rem;
   color: #222;
@@ -819,6 +825,7 @@ section .text_main h3 {
   background-color: rgba(0, 0, 0, 0.28);
   display: none;
 }
+/* .illust_modal02  */
 #con04 .illust_modal02 {
   width: 30%;
   height: 750px;
